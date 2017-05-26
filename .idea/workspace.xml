@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d54c8a2f-b7a3-4743-a57d-bc1d6a7b7b52" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FamilyTreeProject/dataBaseAccess/SQLiteJDBC.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FamilyTreeProject/model/DbContentProvider.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FamilyTreeProject/model/ITreeDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FamilyTreeProject/model/TreeDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FamilyTreeProject/windows/PersonWindow.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/DbContentProvider.java" afterPath="$PROJECT_DIR$/src/model/DbContentProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/ITreeDao.java" afterPath="$PROJECT_DIR$/src/model/ITreeDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Person.java" afterPath="$PROJECT_DIR$/src/model/Person.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/TreeDao.java" afterPath="$PROJECT_DIR$/src/model/TreeDao.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,10 +61,12 @@
       <file leaf-file-name="DbContentProvider.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/DbContentProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="21" column="35" lean-forward="false" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+            <state relative-caret-position="391">
+              <caret line="29" column="13" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <marker date="1495835152340" expanded="true" signature="1904:2053" ph="{...}" />
+                <marker date="1495835152340" expanded="true" signature="2115:2163" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -682,10 +674,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/DbContentProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="35" lean-forward="false" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+        <state relative-caret-position="391">
+          <caret line="29" column="13" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1495835152340" expanded="true" signature="1904:2053" ph="{...}" />
+            <marker date="1495835152340" expanded="true" signature="2115:2163" ph="{...}" />
           </folding>
         </state>
       </provider>
