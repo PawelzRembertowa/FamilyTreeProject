@@ -2,37 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d54c8a2f-b7a3-4743-a57d-bc1d6a7b7b52" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/model/ITreeDao.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/model/Person.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/model/Sex.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/windows/FirstWindow.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/windows/PersonWindow.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FamilyTreeProject/model/ITreeDao.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FamilyTreeProject/model/Person.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FamilyTreeProject/model/Sex.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FamilyTreeProject/sqlite-jdbc-3.18.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FamilyTreeProject/windows/FirstWindow.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FamilyTreeProject/windows/PersonWindow.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_18_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_18_01.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FamilyTreeProject.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FamilyTreeProject/.classpath" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FamilyTreeProject/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FamilyTreeProject/.project" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FamilyTreeProject/.settings/org.eclipse.jdt.core.prefs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FamilyTreeProject/FamilyTreeProject.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/windows/FirstWindow.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/windows/PersonWindow.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/.gitignore" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.classpath" afterPath="$PROJECT_DIR$/.classpath" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/ITreeDao.java" afterPath="$PROJECT_DIR$/src/model/ITreeDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test.db" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dataBaseAccess/SQLiteJDBC.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -151,6 +123,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FamilyTreeProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FamilyTreeProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
