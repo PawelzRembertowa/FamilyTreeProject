@@ -13,16 +13,27 @@ public class PersonWindow extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		Scene secondScene = new Scene(new Group());
-		primaryStage.setTitle("Personal Data");
+		Group root = new Group();
+		Stage primaryStage1 = new Stage();
+		Scene secondScene = new Scene(root);
+		primaryStage1.setTitle("Personal Data");
 		Label nameLabel = new Label("Name");
 		Label surnameLabel = new Label("Surname");
-		TextField textField = new TextField();
+		TextField nameTextField = new TextField();
+		TextField surnameTextField = new TextField();
 		
-		primaryStage.setScene(secondScene);
-		primaryStage.show();
+		root.getChildren().add(nameLabel);
+		root.getChildren().add(nameTextField);
+		root.getChildren().add(surnameLabel);
+		root.getChildren().add(surnameTextField);
+		
+		
+		primaryStage1.setScene(secondScene);
+		primaryStage1.show();
 		
 	}
+
+	
 	
 	
 }
