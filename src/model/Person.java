@@ -17,14 +17,12 @@ public class Person {
 	private int fatherId;
 	private List<Integer> childrenId;
 
-
-	
-	
-	public Person(int id, String name, String surname, String birthDate, String deathDate) {
+	public Person(int id, String name, String surname, String birthDate, String deathDate, Sex sex) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.surname = surname;
+		this.sex = sex;
 		this.birthDate = birthDate;
 		this.deathDate = deathDate;
 		childrenId = Collections.emptyList();
@@ -57,7 +55,37 @@ public class Person {
 	public int getId() {
 		return id;
 	}
-	
-	
-	
+
+
+	public Sex getSex() {
+		return sex;
+	}
+
+	public void setSex(Sex sex) {
+		this.sex = sex;
+	}
+
+	public int getMotherId() {
+		return motherId;
+	}
+
+	public void setMotherId(int motherId) {
+		this.motherId = motherId;
+	}
+
+	public int getFatherId() {
+		return fatherId;
+	}
+
+	public void setFatherId(int fatherId) {
+		this.fatherId = fatherId;
+	}
+
+	public List<Integer> getChildrenId() {
+		return childrenId;
+	}
+
+	public void setChildrenId(List<Integer> childrenId) {
+		this.childrenId = childrenId;
+	}
 }

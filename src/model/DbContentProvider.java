@@ -3,6 +3,7 @@ package model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -12,33 +13,44 @@ public class DbContentProvider {
     Statement stmt = null;
 
 
-    protected Person query() {
+    private Connection connect() {
+        // SQLite connection string
+        String url = "jdbc:sqlite:C://sqlite/db/test.db";
+        Connection conn = null;
+        try {
+            conn = DriverManager.getConnection(url);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return conn;
+    }
+
+    protected Person insert(Person person) {
 
         try {
             establishConnectionWithDb();
 
 
-            String sql = "CREATE TABLE IF NOT EXISTS PEOPLE " +
-                    "(ID 			INT ," +
-                    " NAME           TEXT, " +
-                    " SURENAME       TEXT, " +
-                    " BIRTHDATE      TEXT, " +
-                    " DEATHDATE      TEXT, " +
-                    " SEX            TEXT)";
-            stmt.executeUpdate(sql);
-
-		      /*sql = "INSERT INTO PEOPLE (ID,NAME,SURENAME,BIRTHDATE,DEATHDATE,SEX) " +
-                       "VALUES (1, 'Kamil', 'Wyrzykowski', '19820515','' ,'M' );";
+            String sql = "INSERT INTO PEOPLE (ID,NAME,SURENAME,BIRTHDATE,DEATHDATE,SEX) " +
+                       "VALUES (?,?,?,?,?,?);";
+            
+            try (Connection conn = this.connect();
+                    PreparedStatement pstmt = conn.prepareStatement(sql)) {
+                pstmt.setLong(1, person.getId());
+                pstmt.setString(2, person.getName());
+                pstmt.setString(3, person.getSurname());
+                pstmt.setString(4, person.getBirthDate());
+                pstmt.setString(5, person.getDeathDate());
+                //pstmt.setString(6, person.get);
+                pstmt.executeUpdate();
+            } catch (SQLException e) {
+                System.out.println(e.getMessage());
+            }
+            
+            
+            
 		      stmt.executeUpdate(sql);
 
-		      sql = "INSERT INTO PEOPLE (ID,NAME,SURENAME,BIRTHDATE,DEATHDATE,SEX) " +
-	                   "VALUES (1, 'Pawel', 'zRembertowa', '19890328','' ,'M' );";
-		      stmt.executeUpdate(sql);
-
-		      sql = "INSERT INTO PEOPLE (ID,NAME,SURENAME,BIRTHDATE,DEATHDATE,SEX) " +
-	                   "VALUES (1, 'Michal', 'JamCiTo', '19860922','' ,'M' );";
-		      stmt.executeUpdate(sql);
-		      */
             closeConnectionWithDb();
 
         } catch (Exception e)
@@ -50,7 +62,6 @@ public class DbContentProvider {
         System.out.println("Opened database successfully");
 		return null;
     }
-
 
 
     private void establishConnectionWithDb() throws ClassNotFoundException, SQLException {
