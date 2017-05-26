@@ -7,7 +7,7 @@ import java.util.List;
 public class Person {
 
 	private final int id;
-	private Sex sex;
+	private String sex;
 	private String name;
 	private String surname;
 	private String birthDate;
@@ -17,7 +17,7 @@ public class Person {
 	private int fatherId;
 	private List<Integer> childrenId;
 
-	public Person(int id, String name, String surname, String birthDate, String deathDate, Sex sex) {
+	public Person(int id, String name, String surname, String birthDate, String deathDate, String sex) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -57,11 +57,11 @@ public class Person {
 	}
 
 
-	public Sex getSex() {
+	public String getSex() {
 		return sex;
 	}
 
-	public void setSex(Sex sex) {
+	public void setSex(String sex) {
 		this.sex = sex;
 	}
 
