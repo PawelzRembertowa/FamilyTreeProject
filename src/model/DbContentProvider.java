@@ -12,19 +12,14 @@ public class DbContentProvider {
     Statement stmt = null;
 
 
-    protected Person query() {
+    protected Person query(Integer personId) {
 
         try {
             establishConnectionWithDb();
 
 
-            String sql = "CREATE TABLE IF NOT EXISTS PEOPLE " +
-                    "(ID 			INT ," +
-                    " NAME           TEXT, " +
-                    " SURENAME       TEXT, " +
-                    " BIRTHDATE      TEXT, " +
-                    " DEATHDATE      TEXT, " +
-                    " SEX            TEXT)";
+            String sql = "SELECT ID, NAME, SURENAME, BIRTHDATE, DEATHDATE, SEX FROM PEOPLE " +
+                    "WHERE ID = ?";
             stmt.executeUpdate(sql);
 
 		      /*sql = "INSERT INTO PEOPLE (ID,NAME,SURENAME,BIRTHDATE,DEATHDATE,SEX) " +

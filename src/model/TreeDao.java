@@ -1,21 +1,27 @@
 package model;
 
 
-public class TreeDao implements ITreeDao {
+public class TreeDao extends DbContentProvider implements ITreeDao {
 
+
+    private DbContentProvider dbContentProvider;
 
     @Override
-    public int addPerson() {
-        return 0;
+    public int addPerson(Person person) {
+        dbContentProvider = new DbContentProvider();
+        return dbContentProvider.insert(person);
     }
 
     @Override
-    public Person getPerson() {
+    public Person getPerson(Integer id) {
+        dbContentProvider = new DbContentProvider();
+        Person person = dbContentProvider.query(id);
         return null;
     }
 
     @Override
-    public boolean updatePerson(Person person) {
-        return false;
+    public void updatePerson(Person person) {
+        dbContentProvider = new DbContentProvider();
+        dbContentProvider.update(person);
     }
 }
