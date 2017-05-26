@@ -10,7 +10,8 @@ import javafx.stage.Stage;
 public class FirstWindow extends Application implements EventHandler<ActionEvent>{
 
 	Button button;
-	PersonWindow personWindow;
+	private PersonWindow personWindow;
+	private Stage notprimaryStage;
 	
 	public static void main(String[] args) {
 		launch(args);
@@ -34,7 +35,14 @@ public class FirstWindow extends Application implements EventHandler<ActionEvent
 	@Override
 	public void handle(ActionEvent event) {
 		if (event.getSource()== button){
-			PersonWindow personWindow = new PersonWindow();
+			personWindow = new PersonWindow();
+			try {
+				personWindow.start(notprimaryStage);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			//Application.launch(PersonWindow.class);
 		}
 		
 	}
