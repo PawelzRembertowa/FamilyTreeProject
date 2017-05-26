@@ -1,4 +1,13 @@
 package windows;
+import java.awt.Component;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
+import java.util.Vector;
+
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JComboBox;
+
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.geometry.Insets;
@@ -27,6 +36,19 @@ public class PersonWindow extends Application {
 		Stage primaryStage1 = new Stage();
 		Scene secondScene = new Scene(gridPane, 400, 400);
 		
+		List<Integer> yearList = new ArrayList<Integer>();
+		for (int years = 1700; years <=2020; years++){
+			yearList.add(years);
+			//yearList.add(years+"");}
+		JComboBox yearBox = new JComboBox(new Vector(yearList));
+		//yearBox.setModel(new DefaultComboBoxModel(yearList.toArray()));
+	
+		
+//		for (int years = 1700; years<=Calendar.getInstance().get(Calendar.YEAR);years++){
+//		      yearsList.add(years+"");
+//	       }
+//	        jComboBox1 = new JComboBox(yearsList.toArray());)
+		
 		primaryStage1.setTitle("Personal Data");
 		//NAME
 		Label nameLabel = new Label("Name");
@@ -43,6 +65,7 @@ public class PersonWindow extends Application {
 		//BIRTHDATE
 		Label birthdateLabel = new Label("Birth date");
 		gridPane.add(birthdateLabel, 0, 4);
+		//gridPane.add(yearBox, 0, 5);
 		TextField birthdateTextField = new TextField();
 		gridPane.add(birthdateTextField, 0, 5);
 		
@@ -70,4 +93,4 @@ public class PersonWindow extends Application {
 	
 	
 	
-}
+}}
