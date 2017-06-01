@@ -12,7 +12,7 @@ public class DbContentProvider {
 
     Connection c = null;
     Statement stmt = null;
-
+ 
 
     private Connection connect() {
         // SQLite connection string
@@ -95,7 +95,9 @@ public class DbContentProvider {
             System.exit(0);
         }
         System.out.println("Opened database successfully");
-		return person;
+		//TUTAJ ZMIENILEM BY SIE KOMPILOWALO
+        return null;
+				//person;
     }
     
 

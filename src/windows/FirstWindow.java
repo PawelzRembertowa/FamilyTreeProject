@@ -10,9 +10,10 @@ import model.Person;
 
 public class FirstWindow extends Application implements EventHandler<ActionEvent>{
 
-	Button button;
+	public Button button;
 	private PersonWindow personWindow;
 	private Stage notprimaryStage;
+	private Stage primaryStage;
 	
 	public static void main(String[] args) {
 		launch(args);
@@ -31,19 +32,29 @@ public class FirstWindow extends Application implements EventHandler<ActionEvent
 		
 		primaryStage.setScene(scene);
 		primaryStage.show();
+		
+		
+		//primaryStage.close();
 	}
 
 	@Override
 	public void handle(ActionEvent event) {
 		if (event.getSource()== button){
-			personWindow = new PersonWindow();
+			//znikanie pierwszego okna
+			Stage primaryStage = (Stage) button.getScene().getWindow();
+		    primaryStage.close();
+			//pojawianie sie kolejnego
+		    personWindow = new PersonWindow();
 			try {
 				personWindow.start(notprimaryStage);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			//Application.launch(PersonWindow.class);
+			
+			
+			
+			
 		}
 		
 	}

@@ -5,6 +5,7 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Vector;
 
+import javax.swing.ComboBoxModel;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JComboBox;
 
@@ -19,14 +20,14 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
-import model.Sex;
+
 
 public class PersonWindow extends Application {
 
 	private ChoiceBox sexChoice;
 
 	@Override
-	public void start(Stage primaryStage) throws Exception {
+	public void start(Stage personStage) throws Exception {
 		
 		GridPane gridPane = new GridPane();
 		//Padding wokol tabeli
@@ -36,18 +37,27 @@ public class PersonWindow extends Application {
 		Stage primaryStage1 = new Stage();
 		Scene secondScene = new Scene(gridPane, 400, 400);
 		
-		List<Integer> yearList = new ArrayList<Integer>();
-		for (int years = 1700; years <=2020; years++){
-			yearList.add(years);
-			//yearList.add(years+"");}
-		JComboBox yearBox = new JComboBox(new Vector(yearList));
-		//yearBox.setModel(new DefaultComboBoxModel(yearList.toArray()));
-	
 		
-//		for (int years = 1700; years<=Calendar.getInstance().get(Calendar.YEAR);years++){
-//		      yearsList.add(years+"");
-//	       }
-//	        jComboBox1 = new JComboBox(yearsList.toArray());)
+		//poprzednia metoda	z ArrayLista
+//		ArrayList<Integer> yearList = new ArrayList<Integer>();
+//		for (int years = 1700; years <=2020; years++){
+//			yearList.add(years);
+		
+		
+//		JComboBox<Integer> yearBox = new JComboBox<Integer>();
+//		yearBox.setModel(new DefaultComboBoxModel<Integer>(yearList.toArray(new Integer[1700])));
+
+		ArrayList<Integer> yearsList = new ArrayList(320);
+		int year_end = 2021;
+		System.out.println("Inicjalizujemy Araj Liste");
+		for (int y = 1700; y < year_end; y++){
+			yearsList.add(y);
+		}
+	
+//		JComboBox yearBox = new JComboBox();
+//		yearBox.addItem(yearsList);
+		
+		
 		
 		primaryStage1.setTitle("Personal Data");
 		//NAME
@@ -57,7 +67,7 @@ public class PersonWindow extends Application {
 		gridPane.add(nameTextField, 0, 1);
 		
 		//SURENAME
-		Label surnameLabel = new Label("Surename");
+		Label surnameLabel = new Label("Surname");
 		gridPane.add(surnameLabel, 0, 2);
 		TextField surnameTextField = new TextField();
 		gridPane.add(surnameTextField, 0, 3);
@@ -65,15 +75,20 @@ public class PersonWindow extends Application {
 		//BIRTHDATE
 		Label birthdateLabel = new Label("Birth date");
 		gridPane.add(birthdateLabel, 0, 4);
-		//gridPane.add(yearBox, 0, 5);
-		TextField birthdateTextField = new TextField();
-		gridPane.add(birthdateTextField, 0, 5);
+		//yearBox.setSelectedItem(yearsList);
+		
+		ChoiceBox yearsChoice = new ChoiceBox();
+		yearsChoice.setItems(FXCollections.observableArrayList(yearsList));
+		gridPane.add(yearsChoice, 0, 5);
+	
 		
 		//DEATHDATE
 		Label deathdateLabel = new Label("Death date");
 		gridPane.add(deathdateLabel, 0, 6);
-		TextField deathdateTextField = new TextField();
-		gridPane.add(deathdateTextField, 0, 7);
+		ChoiceBox yearsChoice1 = new ChoiceBox();
+		yearsChoice1.setItems(FXCollections.observableArrayList(yearsList));
+		yearsChoice1.minHeight(250);
+		gridPane.add(yearsChoice1, 0, 7);
 		
 		ChoiceBox sexChoice = new ChoiceBox();
 		sexChoice.setItems(FXCollections.observableArrayList("Male", "Female"));
@@ -93,4 +108,4 @@ public class PersonWindow extends Application {
 	
 	
 	
-}}
+}
